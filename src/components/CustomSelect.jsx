@@ -9,6 +9,7 @@ I need some help with the last two requirements:
 - should save chosen element in app state outside the component
 */
 
+// 'options' is missing in props validation
 // why do I get this problem with the prop and how to fix it?
 function CustomSelect({ options }) {
   const [selected, setSelected] = useState(options[0]);

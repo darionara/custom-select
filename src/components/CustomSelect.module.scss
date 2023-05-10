@@ -46,6 +46,7 @@ Also - should I use the BEM convention here? If yes - what would be my Block?
     height: 7.7rem;
     overflow-y: scroll;
     box-shadow: 0 4px 8px -2px $dark-grey;
+    box-sizing: border-box;
 }
 
 .option {
