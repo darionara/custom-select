@@ -49,18 +49,27 @@ Also - should I use the BEM convention here? If yes - what would be my Block?
     box-sizing: border-box;
 }
 
+
+// is it a good example for using sass?
 .option {
     padding: .5rem 1.5rem;
+
+    &:hover {background-color: $light-blue;}
+
+    .selected {
+        font-weight: 600;
+        background-color: $dark-blue;
+    }
 }
 
-.option:hover {
+/* .option:hover {
     background-color: $light-blue;
-}
+} */
 
 // not working now
-.option .selected {
+/* .option .selected {
     font-weight: 600;
     background-color: $dark-blue;
-}
+} */
 
 
