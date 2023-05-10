@@ -1,0 +1,44 @@
+.container {
+  position: relative;
+  border: 2px solid #b5b7bb;
+  border-radius: 8px;
+  width: 20rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.selectButton {
+  background-color: #dfeafa;
+  width: 20rem;
+  text-align: start;
+  font-weight: 400;
+  border-bottom: 2px solid #b5b7bb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.optionList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 4px;
+}
+
+.option {
+  background-color: #719ee2;
+  padding: 0.5rem;
+}
+
+.option:hover {
+  background-color: #dfeafa;
+}
+
+.option.selected {
+  background-color: #719ee2;
+}/*# sourceMappingURL=CustomSelect.module.css.map */

@@ -1,0 +1,60 @@
+$dark-blue: #719ee2;
+$light-blue: #dfeafa;
+$dark-grey: #929394;
+$light-grey: #b5b7bb;
+
+.label {
+   font-weight: 600;
+}
+
+.container {
+    position: relative;
+    width: 20rem;
+    cursor: pointer;
+    margin-top: .7rem;
+}
+
+.selectButton {
+    position: relative;
+    background-color: #fff;
+    width: 20rem;
+    text-align: start;
+    font-weight: 400;
+    border: 1px solid $light-grey;
+    border-radius: 4px;
+    padding-left: 1.5rem;
+    box-shadow: 0 4px 8px -2px $dark-grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.optionList {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin-top: .4rem;
+    padding: 0;
+    border: 1px solid $light-grey;
+    border-radius: 4px;
+    height: 7.7rem;
+    overflow-y: scroll;
+    box-shadow: 0 4px 8px -2px $dark-grey;
+}
+
+.option {
+    padding: .5rem 1.5rem;
+}
+
+.option:hover {
+    background-color: $light-blue;
+}
+
+// not working now
+.option .selected {
+    font-weight: 600;
+    background-color: $dark-blue;
+}
+
+
