@@ -3,9 +3,17 @@ import styles from './CustomSelect.module.scss';
 import ArrowDown from '../assets/expand_more.svg';
 import ArrowUp from '../assets/expand_less.svg';
 
+/* 
+I need some help with the last two requirements:
+- Should be able to navigate with keyboard (to focus select, open it and navigate list items with arrows)
+- should save chosen element in app state outside the component
+*/
+
+// why do I get this problem with the prop and how to fix it?
 function CustomSelect({ options }) {
   const [selected, setSelected] = useState(options[0]);
   const [isOpen, setIsOpen] = useState(false);
+  // it is my first time using this hook and I will be grateful if we can talk more about it during the meeting :)
   const selectRef = useRef(null);
 
   function selectOption(option) {
