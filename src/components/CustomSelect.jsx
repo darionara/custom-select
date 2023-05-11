@@ -41,7 +41,6 @@ function CustomSelect({ options }) {
         <button className={styles.selectButton} onClick={() => setIsOpen(!isOpen)}>
           <span>{selected}</span>
           <img src={!isOpen ? ArrowDown : ArrowUp}></img>
-          <></>
         </button>
         {isOpen && (
           <ul className={styles.optionList}>

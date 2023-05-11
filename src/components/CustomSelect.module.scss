@@ -12,9 +12,9 @@ Also - should I use the BEM convention here? If yes - what would be my Block?
    font-weight: 600;
 }
 
+// at first, this container was supposed to make a border around the selectButton and optionList but it didn't - why?
 .container {
     position: relative;
-    width: 20rem;
     cursor: pointer;
     margin-top: .7rem;
 }
@@ -61,15 +61,5 @@ Also - should I use the BEM convention here? If yes - what would be my Block?
         background-color: $dark-blue;
     }
 }
-
-/* .option:hover {
-    background-color: $light-blue;
-} */
-
-// not working now
-/* .option .selected {
-    font-weight: 600;
-    background-color: $dark-blue;
-} */
 
 
