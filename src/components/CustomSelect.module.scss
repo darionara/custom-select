@@ -3,16 +3,10 @@ $light-blue: #dfeafa;
 $dark-grey: #929394;
 $light-grey: #b5b7bb;
 
-/* 
-Despite those variables above I don't think I have used scss at all :] 
-Also - should I use the BEM convention here? If yes - what would be my Block?
-*/
-
 .label {
    font-weight: 600;
 }
 
-// at first, this container was supposed to make a border around the selectButton and optionList but it didn't - why?
 .container {
     position: relative;
     cursor: pointer;
@@ -49,17 +43,14 @@ Also - should I use the BEM convention here? If yes - what would be my Block?
     box-sizing: border-box;
 }
 
-
-// is it a good example for using sass?
 .option {
     padding: .5rem 1.5rem;
 
     &:hover {background-color: $light-blue;}
 
-    .selected {
-        font-weight: 600;
-        background-color: $dark-blue;
-    }
+    &:active {font-weight: 600;}
+
+    &--selected {font-weight: 600;}
 }
 
 
