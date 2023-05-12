@@ -53,4 +53,8 @@ $light-grey: #b5b7bb;
     &--selected {font-weight: 600;}
 }
 
+.arrowUp {
+    transform: rotate(180deg);
+}
+
 
