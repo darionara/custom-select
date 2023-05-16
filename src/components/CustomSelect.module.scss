@@ -9,7 +9,6 @@ $light-grey: #b5b7bb;
 
 .container {
     position: relative;
-    width: 20rem;
     cursor: pointer;
     margin-top: .7rem;
 }
@@ -41,20 +40,21 @@ $light-grey: #b5b7bb;
     height: 7.7rem;
     overflow-y: scroll;
     box-shadow: 0 4px 8px -2px $dark-grey;
+    box-sizing: border-box;
 }
 
 .option {
     padding: .5rem 1.5rem;
+
+    &:hover {background-color: $light-blue;}
+
+    &:active {font-weight: 600;}
+
+    &--selected {font-weight: 600;}
 }
 
-.option:hover {
-    background-color: $light-blue;
-}
-
-// not working now
-.option .selected {
-    font-weight: 600;
-    background-color: $dark-blue;
+.arrowUp {
+    transform: rotate(180deg);
 }
 
 

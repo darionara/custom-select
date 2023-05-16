@@ -1,15 +1,14 @@
 import { useState, useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
 import styles from './CustomSelect.module.scss';
-import ArrowDown from '../assets/expand_more.svg';
-import ArrowUp from '../assets/expand_less.svg';
+import arrowDown from '../assets/expand_more.svg';
 
-function CustomSelect({ options }) {
-  const [selected, setSelected] = useState(options[0]);
+function CustomSelect({ options, selected, onSelect }) {
   const [isOpen, setIsOpen] = useState(false);
   const selectRef = useRef(null);
 
   function selectOption(option) {
-    setSelected(option);
+    onSelect(option);
     setIsOpen(false);
   }
 
@@ -23,24 +22,22 @@ function CustomSelect({ options }) {
     return () => {
       document.removeEventListener('click', handleClickOutside);
     };
-  }, [selectRef]);
+  });
 
   return (
-    <>
+    <div>
       <span className={styles.label}>Choose an option:</span>
       <div className={styles.container} ref={selectRef}>
         <button className={styles.selectButton} onClick={() => setIsOpen(!isOpen)}>
           <span>{selected}</span>
-          <img src={!isOpen ? ArrowDown : ArrowUp}></img>
-          <></>
+          <img src={arrowDown} className={isOpen && styles.arrowUp}></img>
         </button>
         {isOpen && (
           <ul className={styles.optionList}>
           {options.map(option => (
             <li 
-              key={option} 
-              // the selected class is not working - how to combine two classes names in one className?
-              className={`${styles.option} ${selected === option ? 'styles.selected' : ''}`} 
+              key={option}
+              className={`${styles.option} ${selected === option ? styles['option--selected'] : ''}`} 
               onClick={() => selectOption(option)}
             >
               {option}
@@ -49,9 +46,15 @@ function CustomSelect({ options }) {
         </ul>        
         )}
       </div>
-    </>
+    </div>
 
   )
+}
+
+CustomSelect.propTypes = {
+  options: PropTypes.array,
+  selected: PropTypes.string,
+  onSelect: PropTypes.func
 }
 
 export default CustomSelect;
