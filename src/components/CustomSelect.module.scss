@@ -51,10 +51,11 @@ $light-grey: #b5b7bb;
     &:active {font-weight: 600;}
 
     &--selected {font-weight: 600;}
+    
+    &--focused {background-color: $light-blue;}
 }
 
 .arrowUp {
     transform: rotate(180deg);
 }
-
 
