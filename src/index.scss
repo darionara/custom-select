@@ -1,3 +1,7 @@
+$violet: #646cff;
+$dark-violet: #535bf2;
+$light-violet: #abafed;
+
 :root {
   box-sizing: border-box;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -7,11 +11,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: $violet;
   text-decoration: none;
 }
 a:hover {
-  color: #535bf2;
+  color: $dark-violet;
 }
 
 li {
@@ -24,6 +28,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: $light-violet;
 }
 
 h1 {
@@ -40,4 +45,7 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
+  &:focus-visible {
+    outline: 2px solid $dark-violet;
+  }
 }

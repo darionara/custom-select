@@ -45,15 +45,19 @@ function CustomSelect({ options, selected, onSelect }) {
     event.preventDefault();
     switch (event.key) {
       case 'ArrowUp':
-        setFocusedIndex((prevIndex) => (prevIndex <= 0 ? options.length - 1 : prevIndex - 1));
+        setFocusedIndex((prevIndex) => (prevIndex <= 0 ? 0 : prevIndex - 1));
         break;
       case 'ArrowDown':
-        setFocusedIndex((prevIndex) => (prevIndex >= options.length - 1 ? 0 : prevIndex + 1));
+        setFocusedIndex((prevIndex) => (prevIndex >= options.length - 1 ? options.length - 1 : prevIndex + 1));
         break;
       case 'Enter':
+      case ' ':
         if (focusedIndex >= 0 && focusedIndex < options.length) {
           selectOption(options[focusedIndex]);
         }
+        break;
+      case 'Escape':
+        setIsOpen(false);
         break;
       default:
         break;
@@ -72,7 +76,7 @@ function CustomSelect({ options, selected, onSelect }) {
           <ul className={styles.optionList} ref={ulRef}>
             {options.map((option, index) => (
               <li
-                key={index}
+                key={option}
                 className={`${styles.option} 
                             ${selected === option ? styles['option--selected'] : ''}
                             ${focusedIndex === index ? styles['option--focused'] : ''}`}

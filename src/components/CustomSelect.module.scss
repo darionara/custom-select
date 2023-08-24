@@ -37,10 +37,11 @@ $light-grey: #b5b7bb;
     padding: 0;
     border: 1px solid $light-grey;
     border-radius: 4px;
-    height: 7.7rem;
+    height: 9.1rem;
     overflow-y: scroll;
     box-shadow: 0 4px 8px -2px $dark-grey;
     box-sizing: border-box;
+    background-color: #fff;
 }
 
 .option {
